@@ -146,7 +146,29 @@ int main(){
   4.Avoid memory leaks
   */
  printf("==Program Completed Successfully\n");
- return 0;
+ 
 
+   //dangling pointer
+   //why pointer = Null is important
+   int *d=(int*) malloc(sizeof(int));
+   *d=5;
+   free(d);
+   //printf()
+   /*
+   Dynamic Array with User Input(real use case)
+   Runtime allocation
+   Real world usage*/
 
+   int n;
+   printf("Enter number of elements:");
+   scanf("%d",&n);
+   int *dynamicArr = (int*) malloc(n*sizeof(int));
+   if (dynamicArr==NULL){
+    printf("Allocation failed!\n");
+    return 1;
+   }
+   for (int i=0;i<5;i++){
+    printf("%d\n",dynamicArr[i]);
+   }
+   return 0;
 }
