@@ -1,0 +1,31 @@
+Key Questions: 
+
+Ques 1:
+- Why do we start the loops at `i = 1` instead of `i = 0` when finding max/min?
+        You assume the first element is max and min
+        Then compare it with the rest
+
+- What would happen if all students got the same score?
+        Program will report: Highest score: 50 (Student 1) Lowest score: 50 (Student 1) because no value is greater than or less than the first one.So, indices never change
+
+- What vulnerabilities exist in this program?
+    No input validation.
+	No bounds checking on scores
+	No retry options
+	Fixed array size
+	No protection agains integer overflow
+	
+Ques 2:
+- What vulnerabilities exist in this program?
+    No input validation.
+	No bounds checking on scores
+	No retry options
+	Fixed array size
+	No protection agains integer overflow
+	
+
+- What happens if multiple students have the same score?
+    In the current implementation, when multiple students have the same score, the linearSearch function only returns the first occurrence (lowest index) where the score is found. 
+
+-How could you modify linearSearch to find all occurrences?
+    I can print all the repeated value in a function.
