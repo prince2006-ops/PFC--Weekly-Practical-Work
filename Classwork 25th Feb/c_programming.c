@@ -56,5 +56,38 @@ int main(){
         printf("%d \n", dynArr[i]);
     }
     printf("\n\n");
-   return 0;
+   
+    int a=100;
+    int *p1=&a;
+    int **p2=&p1;
+    printf("7.Pointer TO POINTER");
+    printf("Value of a=%d\n",a);
+    printf("Using *p1=%d\n",*p1);
+    printf("Using **p2=%d\n",**p2);
+
+    int rows=2, cols=2;
+    int **matrix =(int**)malloc(rows*sizeof(int*));
+    for (int i=0;i<rows;i++){
+        matrix[i]=(int*)malloc(cols*sizeof(int));
+    }
+    for(int i=0;i<rows;i++){
+        {
+            for(int j=0;j<cols;j++){
+                printf("%d",matrix[i][j]);
+            }
+            printf("\n");
+        }
+    }
+    printf("\n");
+
+    int *mat =(int*)malloc(rows*cols*sizeof(int));
+    for (int i=0;i<rows;i++)
+    {
+        for (int j=0;j<cols;j++)
+        {
+            *(mat+i*cols+j)=i+j;
+        }
+        
+
+    }
 }
