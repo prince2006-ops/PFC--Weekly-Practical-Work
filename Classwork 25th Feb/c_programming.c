@@ -34,5 +34,27 @@ int main(){
         printf("%d\n",dynArr[i]);
     }
     printf("\n\n");
-    return 0;
+    
+    
+    int *temp =  realloc(dynArr, 5 *sizeof(int));
+    if(temp ==NULL)
+    {
+        printf("Realloc failed!\n");
+        free(dynArr);
+        return 1;
+    }
+
+    dynArr = temp;
+    
+    //initialize new elements
+    dynArr[3] = 40;
+    dynArr[4] = 50;
+
+    printf("6. Realloc\n\n");
+    for (int i =0 ; i<5 ; i++)
+    {
+        printf("%d \n", dynArr[i]);
+    }
+    printf("\n\n");
+   return 0;
 }
