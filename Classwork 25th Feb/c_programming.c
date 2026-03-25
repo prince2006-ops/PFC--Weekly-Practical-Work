@@ -122,6 +122,7 @@ int main(){
     free(matrix);
 
     free(mat);
+    printf("All memory freed up!!");
 
     return 0;
 }
