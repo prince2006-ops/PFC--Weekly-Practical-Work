@@ -1,16 +1,14 @@
 #include<stdio.h>
 #include<stdlib.h>
-
-// Define the structure
 struct Node {
     int data;
-    struct Node* next;
+    struct Node *next;
 };
 
 int main(){
 
-    struct Node* node1 = (struct Node*)malloc(sizeof(struct Node));
-    struct Node* node2 = (struct Node*)malloc(sizeof(struct Node));
+    struct Node *node1 = (struct Node*)malloc(sizeof(struct Node));
+    struct Node *node2 = (struct Node*)malloc(sizeof(struct Node));
 
     if(node1 == NULL || node2 == NULL){
         printf("Memory allocation failed\n");

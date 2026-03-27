@@ -1,0 +1,31 @@
+Q1. Why does ptr = numbers work without the & operator?
+
+Answer:
+In C, the array name automatically represents the address of its first element.
+So, numbers is equivalent to &numbers[0].
+Therefore, assigning ptr = numbers works without using the & operator.
+
+Q2. What does *(ptr + i) actually compute?
+
+Answer:
+It moves the pointer i positions forward from the base address and then accesses the value stored at that location.
+
+It is equivalent to:
+
+numbers[i]
+ptr[i]
+
+So, *(ptr + i) gives the value at index i.
+
+Q3. What happens if we use *(ptr + 10)?
+
+Answer:
+It accesses memory outside the array, which leads to undefined behavior.
+
+Possible results:
+
+Garbage value
+Program crash
+Unpredictable output
+
+This happens because valid indexes are within the array size, and accessing beyond that is unsafe.
